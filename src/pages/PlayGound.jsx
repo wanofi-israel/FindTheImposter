@@ -121,7 +121,7 @@ function PlayGound() {
       }
     },[reveal])
     
-    console.log(isImposter)
+    // console.log(isImposter)
   return (
     <div className='play-ground'>
       {
