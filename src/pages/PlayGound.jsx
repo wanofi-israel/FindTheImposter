@@ -17,42 +17,21 @@ function PlayGound() {
     const toggleReveal=()=>{
 
         setRevealCount(prev=>prev+1)
-        // console.log("revealcount",revealCount);
         
          setRI(false)
         if(revealCount<np || revealCount ===0 && np===0){
-            // console.log(isImposter,"Outside isImposter");
-            // console.log(imposter,"imposter");
-            // console.log(revealCount,"reveal count click");
-            // console.log(np,"np");
-            // console.log(imposter,"imposter");
-            
-            // if(revealCount+1 >= np && imposter===false){
-            //     console.log("if last player",revealCount);
-            //     console.log("if last player",np-1);
-                
-            //     setRI(true)
-            //     setImposter(true)
-            // }else if(isImposter===revealCount+1 && !imposter){
-            //     console.log(isImposter,"Is Imposter");
-                
-            //     setRI(true)
-            //     setImposter(true)
-            // }
+           
             if(revealCount+1===isImposter){
               setRI(true)
               setImposter(true)
             }
             setReveal(prev=>!prev)
             let ti=setInterval(()=>{
-                console.log("before",timer);
                 
                 if(timer>0){
-                    // console.log("timer",timer);
                     timer--
                     setTimerState(timer)
                 }else{
-                    // console.log("clearing");
                     
                     return clearInterval(ti)
                 }
@@ -64,7 +43,6 @@ function PlayGound() {
                 setTimerState(timer)
             },6000)
         if(reveal){
-            // console.log("clear else",reveal)
             clearInterval(ti)
             return
         }}
@@ -94,13 +72,7 @@ function PlayGound() {
     useEffect(()=>{
        getKeyWord()
     },[round])
-    // console.log(revealCount);
-    // console.log(imposter);
-    // console.log(revealCount);
-    // console.log(np);
-    // console.log(keywords);
-    // console.log(keyword);
-    // console.log(keywords[keyword]);
+    
 
 
     useGSAP(()=>{
@@ -121,7 +93,6 @@ function PlayGound() {
       }
     },[reveal])
     
-    // console.log(isImposter)
   return (
     <div className='play-ground'>
       {
