@@ -1,5 +1,5 @@
 import React from 'react'
-import poster from '../assets/images/FIPoster2.png'
+import poster from '../assets/images/FIPoster3.png'
 import { useNavigate } from 'react-router-dom'
 function Welcome() {
     const navigate=useNavigate()
